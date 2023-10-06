@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<!----------------- Head ------------------>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+  <!-- Boxicons CSS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <title>phone</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+  <main>
+    <!---------------------- navbar ------------------------->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu bar bg-dark text-light"  id="sidebarOpen"></i>
+        <img src="./assets/images/os.jpg"  alt="this is photo" />
+      </div>
+      <div class="navbar_content">
+        <div class="dropdown">
+          <button class="btn btn-dark dropdown-toggle " type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+          </button>
+          <ul id="osama" class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          </ul>
+        </div>
+        
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-hearts"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566ZM9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-search-heart-fill" viewBox="0 0 16 16">
+            <path
+              d="M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z" />
+          </svg>
+        </a>
+        <a href="#" class="position-relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+            class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+            <path
+             d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z" />
+             <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+            </svg>
+        </a>
+      </div>
+    </nav>
+    <!---------------------- sidebar --------------------------->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+          <div class="menu_title menu_dahsboard"></div>
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-home-alt"></i>
+              </span>
+              <span class="navlink">Sections</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+              <a href="#SHIPPING" class="nav_link sublink">shipping</a>
+              <a href="#ESSENTIAL " class="nav_link sublink">Essential </a>
+              <a href="#POSSIBILITIES" class="nav_link sublink">Possibitities</a>
+              <a href="#INNOVATIVE" class="nav_link sublink">Innovative</a>
+              <a href="#ARRIVALS" class="nav_link sublink">Arrivals</a>
+              <a href="#CUSTOMERS" class="nav_link sublink">Customers</a>
+              <a href="#SUPPORT" class="nav_link sublink">Support</a>
+              <a href="#SUBSCRIBE" class="nav_link sublink">Subscribe</a>
+            </ul>
+          </li>
+          <!-- end -->
+          <!-- start -->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-grid-alt"></i>
+              </span>
+              <span class="navlink">Overview</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+              <a href="#" class="nav_link sublink">Nav Sub Link</a>
+              <a href="#" class="nav_link sublink">Nav Sub Link</a>
+              <a href="#" class="nav_link sublink">Nav Sub Link</a>
+              <a href="#" class="nav_link sublink">Nav Sub Link</a>
+            </ul>
+          </li>
+          <!-- end -->
+        </ul>
+        <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+          <!-- Start -->
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bxs-magic-wand"></i>
+              </span>
+              <span class="navlink">Magic build</span>
+            </a>
+          </li>
+          <!-- End -->
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-loader-circle"></i>
+              </span>
+              <span class="navlink">Filters</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-filter"></i>
+              </span>
+              <span class="navlink">Filter</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-cloud-upload"></i>
+              </span>
+              <span class="navlink">Upload new</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-flag"></i>
+              </span>
+              <span class="navlink">Notice board</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-medal"></i>
+              </span>
+              <span class="navlink">Award</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-cog"></i>
+              </span>
+              <span class="navlink">Setting</span>
+            </a>
+          </li>
+          <li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-layer"></i>
+              </span>
+              <span class="navlink">Features</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!---------------HERO SECTION ---------------->
+    <section>
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item first-img active">
+              <div class="w-100 h-100 d-flex align-items-center justify-content-center text-light">
+               <div class="text-center">
+                <p>Delta Zertiga Processor</p>
+                <h1>FULL SCREEN DISPLAY</h1>
+               </div>
+              </div>
+            
+          </div>
+          <div class="carousel-item secound-img">
+            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-light">
+              <div class="text-center">
+               <p>Delta Zertiga Processor</p>
+               <h1>Exclusive Steel Frame</h1>
+              </div>
+             </div>
+           
+          </div>
+          <div class="carousel-item third-img">
+            <div class="w-100 h-100 d-flex align-items-center justify-content-center text-light">
+              <div class="text-center">
+               <p>Delta Zertiga Processor</p>
+               <h1>Curvy Bevel Dual Audio</h1>
+              </div>
+             </div>
+           
+          </div>
+        </div>
+        <button class="carousel-control-prev text-info" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!--------------- section 2  --------------->
+    <section id="SHIPPING" class="mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 d-flex justify-content-center py-2">
+            <div class="d-flex gap-3">
+              <div>
+                <img src="./assets/images/free-deliver-icon.jpg" width="50px" alt="" />
+              </div>
+              <div>
+                <h6>FREE SHIPPING</h6>
+                <p class="text-secondary">For Orders over 50$</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 d-flex justify-content-center py-2">
+            <div class="d-flex gap-3">
+              <div>
+                <img src="./assets/images/offers-icon.jpg" width="50px" alt="" />
+              </div>
+              <div>
+                <h6>FREE SHIPPING</h6>
+                <p class="text-secondary">For Orders over 50$</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 d-flex justify-content-center py-2">
+            <div class="d-flex gap-3">
+              <div>
+                <img src="./assets/images/support-icon.jpg" width="50px" alt="" />
+              </div>
+              <div>
+                <h6>FREE SHIPPING</h6>
+                <p class="text-secondary">For Orders over 50$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------------- section 3(WHAT MAKES THE ESSENTIAL DIFFERENT?) --------------->
+    <section id="ESSENTIAL" class="mt-5">
+      <div class="container py-5 text-light">
+        <div class="text-center  p-2">
+          <h1 class="text-dark">WHAT MAKES THE ESSENTIAL DIFFERENT?</h1>
+          <p>EXPERIENCE HIGH PERFORMANCE AND SECURE</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="d-flex flex-column align-items-center p-2">
+              <div>
+                <img src="./assets/images/ic12.jpg" alt="" />
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <p>PERFECT CUT</p>
+                <h6 class="text-dark">DUAL CAMERA</h6>
+                <p class="text-center">
+                  Tristique senectus et netus et malesuada ant reiet fames.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 p-2">
+            <div class="d-flex flex-column align-items-center">
+              <div>
+                <img src="./assets/images/ic13.jpg" alt="" />
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <p>PERFECT CUT</p>
+                <h6 class="text-dark">DUAL CAMERA</h6>
+                <p class="text-center">
+                  Tristique senectus et netus et malesuada ant reiet fames.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 p-2">
+            <div class="d-flex flex-column align-items-center">
+              <div>
+                <img src="./assets/images/ic11.jpg" alt="" />
+              </div>
+              <div class="d-flex flex-column align-items-center">
+                <p>PERFECT CUT</p>
+                <h6 class="text-dark">DUAL CAMERA</h6>
+                <p class="text-center">
+                  Tristique senectus et netus et malesuada ant reiet fames.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!---------------- section 3(POSSIBILITIES. PERFORMANCE. POWER.) --------------->
+    <section id="POSSIBILITIES" class="mt-5">
+      <div class="container py-5">
+        <div class="text-center p-2">
+          <h2>POSSIBILITIES PERFORMANCE POWER.</h2>
+          <p class="text-secondary">EXPERIENCE HIGH PERFORMANCE AND SECURE</p>
+        </div>
+        <div class="pos w-100">
+          <img src="./assets/images/hotspot_2934b3a5-cd7e-49be-b709-8269a17f7390.jpg" class="img-fluid w-100" alt="" />
+          <span class="dot-1"></span>
+          <span class="dot-2"></span>
+          <span class="dot-3"></span>
+          <span class="dot-4"></span>
+        </div>
+        <div class="row">
+          <div class="col d-flex flex-column align-items-center gap-3">
+            <img src="./assets/images/ic7.jpg" alt="this is image">
+            <h6 class="text-center">SCORPION PROCESSOR</h6>
+            <p class="text-secondary text-center">Tristique senectus et netus et malesuada fames ac turpis.</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center gap-3 mt-5">
+            <img src="./assets/images/ic10.jpg" alt="this is image">
+            <h6 class="text-center">SCORPION PROCESSOR</h6>
+            <p class="text-secondary text-center">Tristique senectus et netus et malesuada fames ac turpis.</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center gap-3">
+            <img src="./assets/images/ic9_db35a001-6739-4b9f-b1d9-12a825ddf8d9.jpg" alt="this is image">
+            <h6 class="text-center">SCORPION PROCESSOR</h6>
+            <p class="text-secondary text-center">Tristique senectus et netus et malesuada fames ac turpis.</p>
+          </div>
+          <div class="col d-flex flex-column align-items-center gap-3 mt-5">
+            <img src="./assets/images/ic8.jpg" alt="this is image">
+            <h6 class="text-center">SCORPION PROCESSOR</h6>
+            <p class="text-secondary text-center">Tristique senectus et netus et malesuada fames ac turpis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------- section 5(INNOVATIVE QUALITIES & FEATURES) --------------------------->
+    <section id="INNOVATIVE" class="mt-5">
+      <div class="container py-5 text-light">
+        <div class="text-center p-2">
+          <h1 class="text-dark">INNOVATIVE QUALITIES & FEATURES</h1>
+          <p >SHOW YOURS TO THE WORLD</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-12 ">
+            <div class="row p-2">
+              <div class="col-12 d-flex  gap-3"">
+                    <div>
+                      <h6 class="text-dark">INTELLIGENT PROCESSOR</h6>
+                      <p>Tellus in hac habitasse platea dictumst vestibulum rhoncus srd mana erti qeueri</p>
+                    </div>
+                    <img src=" ./assets/images/ic5.jpg" alt="this is image">
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-12 d-flex  gap-3"">
+                    <div>
+                      <h6 class="text-dark">HD SURROUND AUDIO</h6>
+                      <p>Sagittis eu volutpat odio ante ut diam quam metus dictfacilisis mauris sit am.
+                      </p>
+                    </div>
+                    <img src=" ./assets/images/ic6.jpg" alt="this is image">
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-12 d-flex  gap-3"">
+                    <div>
+                      <h6 class="text-dark">STYLISH BEVEL EDGES</h6>
+                      <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidid
+                      </p>
+                    </div>
+                    <img src=" ./assets/images/ic3.jpg" alt="this is image">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 py-2">
+            <img src="./assets/images/center-img_eb064c43-efaf-4d56-90df-f89acfdf85fe.jpg" alt="this is image"
+              class="img-fluid w-100">
+          </div>
+          <div class="col-lg-4 col-sm-12 ">
+            <div class="row p-2">
+              <div class="col-12 d-flex  gap-3"">
+                    <img src=" ./assets/images/ic1.jpg" alt="this is image">
+                <div>
+                  <h6 class="text-dark">4.0 WIFI SPECS</h6>
+                  <p>Commodo nulla facilisi nullam vehicula ipsum a arcu sagitis ipsum sed iacus.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-12 d-flex gap-3">
+                <img src="./assets/images/ic4.jpg" alt="this is image">
+                <div>
+                  <h6 class="text-dark">MULIT TASKING & THREADING</h6>
+                  <p>Amet consectetur adipiscing velit laoreet nega id elit pellentesque habitant morbi .
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row p-2">
+              <div class="col-12 d-flex gap-3"">
+                    <img src=" ./assets/images/ic2.jpg" alt="this is image">
+                <div>
+                  <h6 class="text-dark">CLOUD STORAGE</h6>
+                  <p>Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!---------------------- section 6(NEW ARRIVALS) --------------------------->
+    <section id="ARRIVALS" class="mt-5">
+      <div class="container">
+        <div class="text-center  p-2">
+          <h2>NEW ARRIVALS</h2>
+          <p class="text-secondary">FIND THE PERFECT PHONE FOR YOU</p>
+        </div>
+        <div class="row">
+          <div class="splide">
+            <div class="splide__track">
+              <div class="splide__list">
+
+                <!----------------    Cards       ------------->
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+    <!--------------------- CUSTOMERS  --------------------------->
+    <section id="CUSTOMERS" class="mt-5">
+      <div class="container py-5">
+        <div class="text-center  p-2 text-light">
+          <h2>SEE WHY CUSTOMERS LOVE THE OUR MOBILES</h2>
+          <p>DESIGNED TO PERFECTION</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12 py-2">
+            <img src="./assets/images/bg-1.jpg" class="img-fluid w-100" alt="this is image">
+          </div>
+          <div class="col-lg-6 col-sm-12 py-2">
+            <button class="accordion">NEW GRADIENT COLOR FINISHES</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">FOUR-SIDED CURVED CERAMIC BODY</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">4000MAH HIGH-CAPACITY BATTERY</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+            <button class="accordion">FULLY HIDDEN CAMERA LENS</button>
+            <div class="panel">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--------------------- SUPPORT  --------------------------->
+
+    <section id="SUPPORT" class="mt-5">
+      <div class="container">
+        <div class="text-center p-2">
+          <h2>WELCOME TO PHONO SUPPORT WE'RE HERE TO HELP.</h2>
+          <p class="text-secondary">ALWAYS ON YOUR SIDE WHEN YOU NEED HELP</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 py-3">
+              <div class="d-flex gap-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-telephone-forward-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zm10.761.135a.5.5 0 0 1 .708 0l2.5 2.5a.5.5 0 0 1 0 .708l-2.5 2.5a.5.5 0 0 1-.708-.708L14.293 4H9.5a.5.5 0 0 1 0-1h4.793l-1.647-1.646a.5.5 0 0 1 0-.708z"/>
+                </svg>
+                <div>
+                  <p>HAVE ANY DOUBTS?</p>
+                  <h4>CALL US NOW</h4>
+                  <p class="text-secondary">This Number is Toll Free:
+                    0000 - 123 - 456789
+                  </p>
+                  <button type="button" class="btn btn-dark">view more</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12 py-3">
+              <div class="d-flex gap-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-chat-heart-fill" viewBox="0 0 16 16">
+                  <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15Zm0-9.007c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+                </svg>
+                <div>
+                  <p>HAVE ANY DOUBTS?</p>
+                  <h4>CALL US NOW</h4>
+                  <p class="text-secondary ">This Number is Toll Free:
+                    0000 - 123 - 456789
+                  </p>
+                  <button type="button" class="btn btn-dark">view more</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+   <!--------------------- SUBSCRIBE  --------------------------->
+    <section id="SUBSCRIBE" class="mt-5 pb-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="text-center text-light">
+            <h6 class="py-2">SUBSCRIBE NOW</h6>
+            <h2 class="py-2">GET OUR UPDATES ALWAYS FAST</h2>
+            <p class="py-2"> YOUR PERSONAL DATA WILL ALWAYS BE SAFE</p>
+            <div class="input-group w-75  mx-auto ">
+              <input class="form-control border-end-0 border rounded-pill" type="search" value="search"
+                id="example-search-input">
+              <span class="input-group-append">
+                <button style="margin-left: -40px;"
+                  class="btn btn-outline-secondary bg-white border-bottom-0 border rounded-pill ms-n5" type="button">
+                  <svg class="text-dark" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                    class="bi bi-reddit" viewBox="0 0 16 16">
+                    <path
+                      d="M6.167 8a.831.831 0 0 0-.83.83c0 .459.372.84.83.831a.831.831 0 0 0 0-1.661zm1.843 3.647c.315 0 1.403-.038 1.976-.611a.232.232 0 0 0 0-.306.213.213 0 0 0-.306 0c-.353.363-1.126.487-1.67.487-.545 0-1.308-.124-1.671-.487a.213.213 0 0 0-.306 0 .213.213 0 0 0 0 .306c.564.563 1.652.61 1.977.61zm.992-2.807c0 .458.373.83.831.83.458 0 .83-.381.83-.83a.831.831 0 0 0-1.66 0z" />
+                    <path
+                      d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.828-1.165c-.315 0-.602.124-.812.325-.801-.573-1.9-.945-3.121-.993l.534-2.501 1.738.372a.83.83 0 1 0 .83-.869.83.83 0 0 0-.744.468l-1.938-.41a.203.203 0 0 0-.153.028.186.186 0 0 0-.086.134l-.592 2.788c-1.24.038-2.358.41-3.17.992-.21-.2-.496-.324-.81-.324a1.163 1.163 0 0 0-.478 2.224c-.02.115-.029.23-.029.353 0 1.795 2.091 3.256 4.669 3.256 2.577 0 4.668-1.451 4.668-3.256 0-.114-.01-.238-.029-.353.401-.181.688-.592.688-1.069 0-.65-.525-1.165-1.165-1.165z" />
+                  </svg>
+                </button>
+              </span>
+            </div>
+
+              <ul class="mt-5 pt-5" id="listss">
+                <div class="row ">
+                <div class="col-lg-1 col-sm-12 py-1 text-sm-center">
+                  <li><a id="xof" class="text-light" href="#">SEARCH</a></li>
+                </div>
+                <div class="col-lg-2 col-sm-12  py-1 text-sm-center">
+                  <li><a id="xog" class="text-light" href="#">HELP</a></li>
+                </div>
+                <div class="col-lg-3 col-sm-12  py-1 text-sm-center">
+                  <li><a id="xo" class="text-light" href="#">INFORMATION</a></li>
+                </div>
+                <div class="col-lg-3 col-sm-12  py-1 text-sm-center">
+                  <li><a id="xo" class="text-light" href="#">PRIVACY POLICY</a></li>
+                </div>
+                <div class="col-lg-3 col-sm-12  py-1 text-sm-center">
+                  <li><a class="text-light" href="#">SHIPPING DETAILS</a></li>
+                </div>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+   </section>
+   <section id="scrolling_to_top">
+     <a id="scrolling">
+      <svg  xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+      <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+    </svg>
+    </a>
+   </section>
+  </main>
+   <!--------------------- footer  --------------------------->
+ 
+   <footer id="Footer">
+    <div class="container py-2">
+      <div class="row">
+        <div class="d-flex justify-content-around flex-wrap">
+          <p class="my-auto">&copy; 2023 made by osama faroun</p>
+          <div class=" ">
+            <i class="fa-brands fa-cc-visa fa-lg"></i>
+            <i class="fa-brands fa-cc-jcb fa-lg"></i>
+            <i class="fa-brands fa-cc-apple-pay fa-lg"></i>
+            <i class="fa-brands fa-cc-amex fa-lg"></i>
+          </div>
+        </div>
+      
+       
+      </div>
+    </div>
+ 
+  </footer>
+  <!------------------ JavaScript ---------------->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+
+  <!----------------- for  Cards slider  in section 6 --------------------------->
+
+</body>
+
+</html>

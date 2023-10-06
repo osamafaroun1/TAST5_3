@@ -1,0 +1,33 @@
+[
+    {
+        "name":"iPhone 9",
+        "description":"An apple mobile which is nothing like apple",
+        "price":"200$"
+    },
+    {
+        "name":"Samsung not 8",
+        "description":"Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price":"300$"
+    },
+    {
+        "name":"OPPOF19",
+        "description":"OPPO F19 is officially announced on April 2021.",
+        "price":"150$"
+    },
+    { 
+        "name":"Gulab Powder 50 Gram",
+      "description":"Dry Rose Flower Powder Gulab Powder 50 Gram • Treats Wounds",
+      "price":"250$"
+        
+    },
+    {
+        "name":"OPPOF17",
+        "description":"OPPO F17 is officially announced on April 2021.",
+        "price":"600$"
+    },
+    {
+        "name":"Samsung not 9",
+        "description":"Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price":"500$"
+    }
+]

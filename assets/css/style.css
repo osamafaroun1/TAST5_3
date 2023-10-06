@@ -1,0 +1,633 @@
+/***************** Import Google font - Poppins ******************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+/******************* General**********************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	font-size: 1rem !important;
+}
+
+/*************************** navbar *****************************/
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 30px;
+	z-index: 1000;
+	background-color: #ffffffe3;
+	height: max-content;
+}
+
+.logo_item {
+	display: flex;
+	align-items: center;
+	column-gap: 10px;
+	font-size: 22px;
+	font-weight: 500;
+}
+
+.logo_item i {
+	padding: 8px;
+}
+
+.navbar img {
+	width: 120px;
+	object-fit: cover;
+}
+
+.search_bar {
+	height: 47px;
+	max-width: 430px;
+	width: 100%;
+}
+
+.search_bar input {
+	height: 100%;
+	width: 100%;
+	border-radius: 25px;
+	font-size: 18px;
+	outline: none;
+	background-color: var(--white-color);
+	color: var(--grey-color);
+	border: 1px solid var(--grey-color-light);
+	padding: 0 20px;
+}
+
+.navbar_content {
+	display: flex;
+	align-items: center;
+	column-gap: 25px;
+}
+
+.navbar_content a {
+	cursor: pointer;
+	color: black;
+}
+
+.bar {
+	background-color: white;
+	border-radius: 5px;
+}
+
+/*************************** sidebar ***************************/
+.sidebar {
+	width: 260px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 80px 20px;
+	z-index: 100;
+	overflow-y: scroll;
+	box-shadow: 0 0 1px var(--grey-color-light);
+	transition: all 0.5s ease;
+	background-color: #ffffffac;
+	color: black;
+}
+
+.sidebar.close {
+	padding: 60px 0;
+	width: 80px;
+}
+
+.sidebar::-webkit-scrollbar {
+	display: none;
+}
+
+.menu_content {
+	position: relative;
+}
+
+.menu_title {
+	margin: 15px 0;
+	padding: 0 20px;
+	font-size: 18px;
+}
+
+.menu_title::before {
+	white-space: nowrap;
+}
+
+.menu_dahsboard::before {
+	content: "Phones";
+}
+
+.menu_editor::before {
+	content: "Editor";
+}
+
+.menu_setting::before {
+	content: "Setting";
+}
+
+.menu_items {
+	padding: 0;
+	list-style: none;
+}
+
+.navlink_icon {
+	position: relative;
+	font-size: 22px;
+	min-width: 50px;
+	line-height: 40px;
+	display: inline-block;
+	text-align: center;
+	border-radius: 6px;
+}
+
+.navlink_icon::before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: calc(100% + 100px);
+	left: -20px;
+}
+
+.sidebar .nav_link {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	padding: 4px 15px;
+	border-radius: 8px;
+	text-decoration: none;
+	color: var(--grey-color);
+	white-space: nowrap;
+}
+
+.submenu_item {
+	cursor: pointer;
+}
+
+.submenu {
+	display: none;
+}
+
+.submenu_item .arrow-left {
+	position: absolute;
+	right: 10px;
+	display: inline-block;
+	margin-right: auto;
+}
+
+.show_submenu~.submenu {
+	display: block;
+}
+
+.show_submenu .arrow-left {
+	transform: rotate(90deg);
+}
+
+.submenu .sublink {
+	padding: 15px 15px 15px 52px;
+}
+
+.bottom_content {
+	position: fixed;
+	bottom: 60px;
+	left: 0;
+	width: 260px;
+	cursor: pointer;
+	transition: all 0.5s ease;
+}
+
+.bottom {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	left: 0;
+	justify-content: space-around;
+	padding: 18px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.bottom i {
+	font-size: 20px;
+}
+
+.bottom span {
+	font-size: 18px;
+}
+
+/***************************hero Slider*******************************/
+
+.carousel-inner .first-img {
+	background:
+		linear-gradient(rgba(15, 16, 16, 0.727),
+			rgba(6, 7, 8, 0.831)),
+		url(.././images/phono-slider-3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100vw;
+	height: 100vh;
+}
+
+.carousel-inner .secound-img {
+	background:
+		linear-gradient(rgba(15, 16, 16, 0.727),
+			rgba(6, 7, 8, 0.831)),
+		url(.././images/phono-slider-1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100vw;
+	height: 100vh;
+}
+
+.carousel-inner .third-img {
+	background:
+		linear-gradient(rgba(15, 16, 16, 0.727),
+			rgba(6, 7, 8, 0.831)),
+		url(.././images/phono-slider-2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100vw;
+	height: 100vh;
+}
+
+/*********************sections background * *************************/
+#ESSENTIAL,
+#INNOVATIVE {
+	background-color: rgba(0, 0, 0, 0.301);
+}
+
+/*********************POSSIBILITIES SECTION***********************/
+
+.pos {
+	position: relative;
+}
+
+.dot-1 {
+	position: absolute;
+	left: 11%;
+	top: 60%;
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot-2 {
+	position: absolute;
+	left: 36%;
+	top: 60%;
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot-3 {
+	position: absolute;
+	left: 62%;
+	top: 60%;
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot-4 {
+	position: absolute;
+	left: 87%;
+	top: 60%;
+	height: 20px;
+	width: 20px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.dot-1::after {
+	content: '';
+	position: relative;
+	background-color: black;
+	left: 7px;
+	display: block;
+	width: 2px;
+	height: 180px;
+	top: 3px;
+}
+
+.dot-2::after {
+	content: '';
+	position: relative;
+	background-color: black;
+	left: 7px;
+	display: block;
+	width: 2px;
+	height: 236px;
+	top: 3px;
+}
+
+.dot-3::after {
+	content: '';
+	position: relative;
+	background-color: black;
+	left: 7px;
+	display: block;
+	width: 2px;
+	height: 190px;
+	top: 3px;
+}
+
+.dot-4::after {
+	content: '';
+	position: relative;
+	background-color: black;
+	left: 7px;
+	display: block;
+	width: 2px;
+	height: 230px;
+	top: 3px;
+}
+
+/************* flags & country style*******************/
+
+#osama {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+#fla {
+	width: 15px;
+	height: 15px;
+}
+
+/*********************** CUSTOMERS SECTION**********************************/
+
+#CUSTOMERS {
+	background:
+		linear-gradient(rgba(15, 16, 16, 0.727),
+			rgba(6, 7, 8, 0.831)),
+		url(.././images/phone2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100vw;
+}
+
+
+/************************* accordion style*******************************/
+.accordion {
+	background-color: hsla(0, 0%, 0%, 0);
+	color: #fff;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+	border-radius: 10px;
+	border-bottom: 2px solid black;
+}
+
+.accordion:after {
+	content: '\002B';
+	color: #fff;
+	font-weight: bold;
+	float: right;
+	margin-left: 5px;
+}
+
+.active:after {
+	content: "\2212";
+
+}
+
+.panel {
+	padding: 0 18px;
+	/*	background-color: black;*/
+	color: #fff;
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+	border-radius: 10px;
+}
+
+/***********************SUBSCRIBE section************************/
+#SUBSCRIBE {
+	background:
+		linear-gradient(rgba(15, 16, 16, 0.727),
+			rgba(6, 7, 8, 0.831)),
+		url(.././images/phone2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	max-width: 100vw;
+
+
+}
+
+#listss {
+	padding: 0 !important;
+}
+
+#listss li {
+	list-style: none;
+}
+
+#listss li a {
+	text-decoration: none;
+}
+
+#xo::after {
+	content: '';
+	position: relative;
+	background-color: #fff;
+	left: 280px;
+	display: block;
+	width: 1px;
+	height: 40px;
+	bottom: 30px;
+}
+
+#xof::after {
+	content: '';
+	position: relative;
+	background-color: #fff;
+	left: 100px;
+	display: block;
+	width: 1px;
+	height: 40px;
+	bottom: 30px;
+}
+
+#xog::after {
+	content: '';
+	position: relative;
+	background-color: #fff;
+	left: 180px;
+	display: block;
+	width: 1px;
+	height: 40px;
+	bottom: 30px;
+}
+
+
+
+/***********************footer************************/
+#Footer {
+	position: fixed;
+	height: max-content;
+	width: 100%;
+	bottom: 0;
+	z-index: 1000;
+	background-color: hsla(0, 0%, 0%, 0.8);
+	color: #fff;
+}
+
+#scrolling_to_top {
+	position: fixed;
+	width: 100%;
+	bottom: 50px;
+	left: 10px;
+	z-index: 1000;
+	color: #fff;
+}
+
+#scrolling_to_top a {
+	color: red;
+}
+
+/**********************************media query**************************************/
+
+/*****************  font size ****************************/
+@media screen and (max-width: 430px) {
+	body {
+		font-size: 0.95rem !important;
+	}
+
+	h1,
+	h2,
+	h3,
+	h6 {
+		font-size: 1.1rem !important;
+	}
+}
+
+/***************for navbar content in small screen*********************/
+
+@media screen and (max-width: 430px) {
+	.logo_item i {
+		padding: 1px;
+		font-size: 25px !important;
+	}
+
+	.navbar img {
+		width: 80px;
+	}
+
+	.navbar_content a {
+		display: none;
+	}
+
+
+}
+
+/********************* for sidebar content****************************/
+@media screen and (max-width: 2000px) {
+	#sidebarOpen {
+		font-size: 25px;
+		display: block;
+		margin-right: 10px;
+		cursor: pointer;
+		color: var(--grey-color);
+	}
+
+	.sidebar.close {
+		left: -100%;
+	}
+
+	.search_bar {
+		display: none;
+	}
+
+	.sidebar.close .bottom_content {
+		left: -100%;
+	}
+}
+
+/************* flags & country style*******************/
+@media screen and (max-width: 400px) {
+	#dropdownMenuButton1 {
+		font-size: 9px;
+		max-width: max-content;
+		max-height: max-content;
+	}
+
+}
+
+@media screen and (max-width: 320px) {
+	.navbar_content {
+		column-gap: 15px;
+		align-items: center;
+	}
+
+}
+
+/*********** for section (POSSIBILITIES. PERFORMANCE. POWER.)***************/
+
+	@media screen and (max-width: 1000px) {
+		.dot-1,.dot-2,.dot-3,.dot-4 {
+			display: none;
+		}
+	}
+/***********************SUBSCRIBE section************************/
+@media screen and (max-width: 320px) {
+	.navbar_content {
+		column-gap: 15px;
+		align-items: center;
+	}
+
+}
+
+/*********** for section (UPDATES)***************/
+@media screen and (max-width: 1000px) {
+
+	#xo::after {
+		display: none;
+
+	}
+
+	#xof::after {
+		display: none;
+
+	}
+
+	#xog::after {
+		display: none;
+	}
+}
+
+/********************* scrolling to top**************************/
+@media screen and (max-width: 430px) {
+	#scrolling_to_top {
+		bottom: 60px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	#scrolling_to_top {
+		bottom: 70px;
+	}
+}
